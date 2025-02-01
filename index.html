@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -8,9 +8,15 @@
 </head>
 <body>
   <h1>Jogo Snake</h1>
+  <div id="menu">
+    <label for="playerName">Nome do Jogador:</label>
+    <input type="text" id="playerName" placeholder="Digite seu nome">
+    <button onclick="startGame('singleplayer')">Modo Singleplayer</button>
+    <button onclick="startGame('vsCPU')">Modo vs. CPU</button>
+  </div>
   <div id="score">Pontuação: 0</div>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
-  <button onclick="location.reload()">Jogar Novamente</button>
+  <canvas id="gameCanvas"></canvas>
+  <button onclick="restartGame()">Jogar Novamente</button>
   <div id="ranking"></div>
   <script src="js/script.js" defer></script>
 </body>
